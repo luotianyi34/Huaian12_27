@@ -34,6 +34,13 @@ public class MyException2 {
         2.ArrayIndexOutOfBoundsException 数组下标越界异常
         3.ArithmeticException 运算异常
         4.Exception 未知异常(不知道会出现什么，都用Exception)
+        5......
+
+    自定义异常类 extends RunTimeException 和 extends Exception
+    区别:extends Exception     A->B的时候 B会告知A可能会有异常 这时候需要A做捕获异常处理的操作
+        必须要用throw声明 一旦声明异常 就告知调用者需要进行捕获，一旦问题处理了调用者的程序会继续执行
+        extends RunTimeException A->B的时候 不知道有没有异常 如果出现异常直接终止程序
+        不需要throw声明，也不需要写捕获代码,因为调用者根本不知道可能会有异常，一旦发生异常 程序直接终止
 
     * */
     public static void main(String[] args) throws Exception {
